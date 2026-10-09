@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+About Me
+{% endblock title %}
+
+{% block content %}
+<section class="about-page" aria-labelledby="about-name">
+  <div class="container px-4">
+    <div class="row align-items-start g-4 g-lg-5">
+
+      <!-- Larger circular photo on the left -->
+      <div class="col-12 col-md-4 text-center">
+        <img
+          src="{% static 'img/Portpic.png' %}"
+          class="about-photo rounded-circle img-fluid"
+          alt="Illustrated portrait of Court Swift wearing a navy suit"
+          width="320"
+          height="320"
+        >
+      </div>
+
+      <!-- Text starts beside the photo -->
+      <div class="col-12 col-md-8">
+        <header class="about-intro">
+          <p class="about-eyebrow mb-2">About Me</p>
+
+          <h1 id="about-name" class="about-name">
+            Courtney Swift
+          </h1>
+
+          <p class="about-role mb-4">
+            IT Administrator · Cybersecurity · Full-Stack Development
+          </p>
+        </header>
+
+        <div class="about-text">
+          <p>
+            Welcome to my portfolio! I’m a veteran based in Okinawa,
+            Japan, with a background in computer networking,
+            cybersecurity, and technical support. I enjoy solving
+            problems, helping people understand technology, and
+            building applications that are useful and easy to navigate.
+          </p>
+
+          <h2 class="about-section-title">Education and Training</h2>
+
+          <p>
+            I hold a Bachelor of Science in Computer Networks and
+            Cybersecurity, along with CompTIA Security+, Network+,
+            and CySA+ certifications. My seven-month Full-Stack
+            Immersion training covered JavaScript, React, Python,
+            Flask, SQL, HTML, CSS, Agile and Scrum, Jinja, Github and Bootstrap.
+          </p> 
+
+          <p>
+            I use that foundation to develop my web projects while
+            continuing to strengthen my programming, troubleshooting,
+            and security skills.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock content %}

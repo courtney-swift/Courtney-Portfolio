@@ -1,0 +1,351 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Experience
+{% endblock title %}
+
+{% block content %}
+<section aria-labelledby="experience-title">
+  <div class="container px-4">
+
+    <div class="row align-items-start g-4 g-lg-5">
+
+      <!-- Portrait on the left -->
+      <div class="col-12 col-md-4 text-center">
+        <img
+          src="{% static 'img/Portpic.png' %}"
+          class="about-photo rounded-circle img-fluid"
+          alt="Illustrated portrait of Court Swift"
+          width="320"
+          height="320"
+        >
+      </div>
+
+      <!-- Experience beside the portrait -->
+      <div class="col-12 col-md-8">
+        <header class="about-intro">
+          <p class="about-eyebrow mb-2">My Background</p>
+
+          <h1 id="experience-title" class="about-name">
+            Experience
+          </h1>
+
+          <p class="about-role mb-4">
+            Technical Support · Networking · Web Development
+          </p>
+        </header>
+
+        <div class="about-text">
+          <p>
+            My experience combines hands-on technical support,
+            network operations, and work with healthcare technology.
+            I enjoy troubleshooting problems, explaining solutions
+            clearly, and helping people use technology confidently.
+            My full-stack training has also given me opportunities
+            to build web applications and connect what users see
+            with the logic and data behind the scenes.
+          </p>
+
+          <h2 class="about-section-title">
+            Network Operations
+          </h2>
+
+          <ul class="about-experience">
+            <li>
+              Monitored network performance, availability, and
+              traffic to identify service issues.
+            </li>
+            <li>
+              Investigated incidents, performed initial diagnostics,
+              and escalated problems when additional support was needed.
+            </li>
+            <li>
+              Assisted with installing and configuring network
+              hardware and software.
+            </li>
+            <li>
+              Provided technical assistance to external clients
+              and communicated troubleshooting progress.
+            </li>
+          </ul>
+
+          <h2 class="about-section-title">
+            Telehealth Technical Support
+          </h2>
+
+          <ul class="about-experience">
+            <li>
+              Troubleshot health monitoring devices and telehealth
+              platforms used by patients and healthcare staff.
+            </li>
+            <li>
+              Helped users navigate patient portals and related
+              digital services.
+            </li>
+            <li>
+              Documented support activity while following HIPAA
+              and patient confidentiality procedures.
+            </li>
+          </ul>
+
+          <h2 class="about-section-title">
+            Mobile Device Support
+          </h2>
+
+          <ul class="about-experience">
+            <li>
+              Provided advanced troubleshooting for iOS and
+              Android devices for approximately 150 customers
+              per month.
+            </li>
+            <li>
+              Assisted with email configuration, cloud services,
+              and device connectivity issues.
+            </li>
+            <li>
+              Trained seven staff members in support procedures
+              and troubleshooting techniques.
+            </li>
+          </ul>
+
+          <h2 class="about-section-title">
+            Medical Records and Healthcare Systems
+          </h2>
+
+          <ul class="about-experience">
+            <li>
+              Processed approximately 800 electronic medical
+              records monthly using CHCS and AHLTA.
+            </li>
+            <li>
+              Verified documentation for completeness and accuracy.
+            </li>
+            <li>
+              Provided basic technical assistance and escalated
+              system problems when needed.
+            </li>
+          </ul>
+
+          <h2 class="about-section-title">
+            Retail and Point of Sale Support
+          </h2>
+
+          <ul class="about-experience">
+            <li>
+              Supported approximately 60 customers per shift
+              with purchases, returns, and exchanges.
+            </li>
+            <li>
+              Troubleshot point-of-sale and digital transaction
+              problems.
+            </li>
+            <li>
+              Used inventory and reporting tools to support
+              daily store operations.
+            </li>
+          </ul>
+
+          <h2 class="about-section-title">
+            Full-Stack Development Training
+          </h2>
+
+          <p>
+            My seven-month Full-Stack Immersion training covered
+            HTML, CSS, Bootstrap, JavaScript, React, jQuery,
+            Python, Flask, SQL, and SQLite. Through coursework
+            and practice projects, I have worked on responsive
+            interfaces, API routes, database relationships,
+            and troubleshooting application errors.
+          </p>
+
+          <p>
+            I have also practiced Django development through a
+            blog project and planned user flows and interface
+            designs for SecureMe. These projects help me apply
+            my technical support background to building
+            applications with clear navigation and useful features.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project examples at the bottom -->
+    <section
+      class="mt-5 pt-4"
+      aria-labelledby="projects-title"
+    >
+      <p class="about-eyebrow mb-2">
+        Coursework and Practice Projects
+      </p>
+
+      <h2 id="projects-title" class="project-section-title mb-3">
+        My Development Projects
+      </h2>
+
+      <p class="about-text mb-4">
+        These projects show the technologies and development
+        concepts I have been practicing. They include interface
+        design, backend APIs, database work, and responsive layouts.
+      </p>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+        <!-- Budget Manager -->
+        <div class="col">
+          <article class="card project-card h-100">
+            <div class="card-body d-flex flex-column">
+              <p class="project-category">Backend and Database</p>
+
+              <h3 class="card-title h4">Budget Manager</h3>
+
+              <p class="card-text">
+                A Flask and SQLite practice application for
+                managing users and expenses. I worked on API
+                routes for retrieving, adding, and updating
+                expense records.
+              </p>
+
+              <p class="card-text">
+                <strong>What I practiced:</strong>
+                CRUD operations, user-to-expense relationships,
+                HTTP methods, and debugging route and database errors.
+              </p>
+
+              <div class="mt-auto pt-2">
+                <span class="about-skill">Python</span>
+                <span class="about-skill">Flask</span>
+                <span class="about-skill">SQLite</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Coupons and products -->
+        <div class="col">
+          <article class="card project-card h-100">
+            <div class="card-body d-flex flex-column">
+              <p class="project-category">Frontend and API Practice</p>
+
+              <h3 class="card-title h4">
+                Coupons and Products Admin
+              </h3>
+
+              <p class="card-text">
+                Practice work involving React forms for adding
+                coupons and products, alongside Flask endpoints
+                for listing coupons and returning their count.
+              </p>
+
+              <p class="card-text">
+                <strong>What I practiced:</strong>
+                React state, form inputs, array updates,
+                JSON responses, and displaying record counts.
+              </p>
+
+              <div class="mt-auto pt-2">
+                <span class="about-skill">React</span>
+                <span class="about-skill">JavaScript</span>
+                <span class="about-skill">Flask</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Django Blog -->
+        <div class="col">
+          <article class="card project-card h-100">
+            <div class="card-body d-flex flex-column">
+              <p class="project-category">Web Application</p>
+
+              <h3 class="card-title h4">Django Blog</h3>
+
+              <p class="card-text">
+                A blog project with post creation and editing,
+                status selection, and separate views for a
+                user's draft and archived posts.
+              </p>
+
+              <p class="card-text">
+                <strong>What I practiced:</strong>
+                Django models, class-based views, QuerySet
+                filtering, template rendering, and URL configuration.
+              </p>
+
+              <div class="mt-auto pt-2">
+                <span class="about-skill">Python</span>
+                <span class="about-skill">Django</span>
+                <span class="about-skill">HTML</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- SecureMe -->
+        <div class="col">
+          <article class="card project-card h-100">
+            <div class="card-body d-flex flex-column">
+              <p class="project-category">Security App Design</p>
+
+              <h3 class="card-title h4">SecureMe</h3>
+
+              <p class="card-text">
+                An ongoing security application project
+                involving user research, navigation flows,
+                wireframes, and HTML interface mockups.
+              </p>
+
+              <p class="card-text">
+                <strong>What I practiced:</strong>
+                User-centered design, accessibility,
+                user stories, acceptance criteria, and
+                planning application development.
+              </p>
+
+              <div class="mt-auto pt-2">
+                <span class="about-skill">HTML</span>
+                <span class="about-skill">CSS</span>
+                <span class="about-skill">UX Design</span>
+                <span class="about-skill">Scrum</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Coffee Website -->
+        <div class="col">
+          <article class="card project-card h-100">
+            <div class="card-body d-flex flex-column">
+              <p class="project-category">Responsive Website</p>
+
+              <h3 class="card-title h4">Ember &amp; Oak</h3>
+
+              <p class="card-text">
+                A coffee shop website with a home introduction,
+                categorized menu, About section, and contact
+                information using demonstration business details.
+              </p>
+
+              <p class="card-text">
+                <strong>What I practiced:</strong>
+                Responsive layouts, mobile navigation,
+                keyboard accessibility, and planning a
+                working increment through a Scrum Sprint.
+              </p>
+
+              <div class="mt-auto pt-2">
+                <span class="about-skill">HTML</span>
+                <span class="about-skill">CSS</span>
+                <span class="about-skill">JavaScript</span>
+                <span class="about-skill">Scrum</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</section>
+{% endblock content %}

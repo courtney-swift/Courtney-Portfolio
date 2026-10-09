@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Projects
+{% endblock title %}
+
+{% block content %}
+<section aria-labelledby="projects-title">
+    <div class="container px-4">
+
+    <header class="mb-5">
+        <p class="about-eyebrow mb-2">
+        Coursework and Practice Projects
+        </p>
+
+        <h1 id="projects-title" class="about-name">
+        My Projects
+        </h1>
+
+        <p class="about-text">
+        These projects show the technologies and development
+        concepts I have been practicing, including responsive
+        interfaces, backend APIs, database work, and security
+        application design.
+        </p>
+    </header>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+        {% for project in projects %}
+    <div class="col">
+        <article class="card project-card h-100">
+
+{% if project.name == "Pet Shop" %}
+    <img
+        src="{% static 'img/Pet_Salon.png' %}"
+        class="project-background"
+        alt=""
+        loading="lazy">
+{% elif project.image %}
+    <img
+        src="{{ project.image.url }}"
+        class="project-background"
+        alt=""
+        loading="lazy">
+{% endif %}
+
+            <div class="project-overlay" aria-hidden="true"></div>
+
+            <div class="card-body project-content d-flex flex-column">
+                <p class="project-category">
+                Development Project
+                </p>
+
+                <h2 class="card-title h4">
+                {{ project.name }}
+                </h2>
+
+                <p class="project-year">
+                {{ project.year }}
+                </p>
+
+                <p class="card-text">
+                {{ project.description }}
+                </p>
+
+            <div class="mt-auto pt-3">
+                <div class="mb-3">
+                    {% for skill in project.skills.all %}
+                    <span class="about-skill">
+                        {{ skill.name }}
+                    </span>
+        {% endfor %}
+                </div>
+
+                {% if project.repository %}
+                    <a
+                    href="{{ project.repository }}"
+                    class="btn btn-outline-light"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View {{ project.name }} repository">
+                    View Repository
+                    </a>
+                {% endif %}
+            </div>
+            </div>
+
+        </article>
+        </div>
+
+    {% empty %}
+        <div class="col">
+            <p class="about-text">
+            Project examples will appear here once they are added.
+            </p>
+        </div>
+    {% endfor %}
+
+    <!-- Age Calculator -->
+<div class="col">
+    <article class="card project-card h-100">
+
+    <img
+        src="{% static 'img/age-calculator.png' %}"
+        class="project-background"
+        alt=""
+        loading="lazy">
+
+    <div class="project-overlay" aria-hidden="true"></div>
+
+    <div class="card-body project-content d-flex flex-column">
+        <p class="project-category">Application Logic</p>
+
+        <h2 class="card-title h4">Age Calculator</h2>
+
+        <p class="card-text">
+        An age calculator project designed to accept a date of
+        birth and display an age in years, with a more detailed
+        result in years, months, and days.
+        </p>
+
+        <p class="card-text">
+        <strong>What I practiced:</strong>
+        Planning date validation, handling future and invalid
+        dates, and defining birthday edge cases through
+        acceptance criteria.
+        </p>
+
+    <div class="mt-auto pt-3">
+        <span class="about-skill">Date Logic</span>
+        <span class="about-skill">Validation</span>
+        <span class="about-skill">User Stories</span>
+    </div>
+    </div>
+
+    </article>
+</div>
+
+<!-- Python Data Structures -->
+<div class="col">
+    <article class="card project-card h-100">
+
+    <img
+        src="{% static 'img/python-data-structures.png' %}"
+        class="project-background"
+        alt=""
+        loading="lazy">
+
+    <div class="project-overlay" aria-hidden="true"></div>
+
+    <div class="card-body project-content d-flex flex-column">
+        <p class="project-category">Programming Fundamentals</p>
+
+        <h2 class="card-title h4">Python Data Structures</h2>
+
+        <p class="card-text">
+        A collection of practice exercises involving stacks,
+        queues, tuples, and custom Python classes, including
+        reversing a string with a stack.
+        </p>
+
+        <p class="card-text">
+        <strong>What I practiced:</strong>
+        Object-oriented programming, queue operations,
+        collection handling, and debugging method and
+        argument errors.
+        </p>
+
+    <div class="mt-auto pt-3">
+        <span class="about-skill">Python</span>
+        <span class="about-skill">Classes</span>
+        <span class="about-skill">Data Structures</span>
+    </div>
+    </div>
+
+    </article>
+</div>
+
+<!-- Personal Portfolio -->
+<div class="col">
+    <article class="card project-card h-100">
+
+    <img
+        src="{% static 'img/personal-portfolio.png' %}"
+        class="project-background"
+        alt=""
+        loading="lazy">
+
+    <div class="project-overlay" aria-hidden="true"></div>
+
+    <div class="card-body project-content d-flex flex-column">
+        <p class="project-category">Ongoing Web Development</p>
+
+        <h2 class="card-title h4">Personal Portfolio</h2>
+
+        <p class="card-text">
+        My Django portfolio brings together my background,
+        technical experience, and development projects in
+        a responsive website.
+        </p>
+
+        <p class="card-text">
+        <strong>What I practiced:</strong>
+        Template inheritance, shared stylesheets, Bootstrap
+        layouts, navigation links, and displaying project
+        records with their images and skills.
+        </p>
+
+    <div class="mt-auto pt-3">
+        <span class="about-skill">Django</span>
+        <span class="about-skill">Bootstrap</span>
+        <span class="about-skill">HTML and CSS</span>
+    </div>
+</div>
+
+    </article>
+</div>
+
+    </div>
+    </div>
+</section>
+{% endblock content %}
